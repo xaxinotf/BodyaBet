@@ -9,7 +9,6 @@ namespace BodyaBet.Contexts
         public VolleyballContext(DbContextOptions<VolleyballContext> options)  : base(options)
         {
 
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
