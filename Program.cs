@@ -30,6 +30,9 @@ namespace BodyaBet
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
 
             app.UseHttpsRedirection();
 

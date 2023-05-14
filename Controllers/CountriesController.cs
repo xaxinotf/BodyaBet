@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BodyaBet.Contexts;
 using BodyaBet.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BodyaBet.Controllers
 {
@@ -90,6 +91,10 @@ namespace BodyaBet.Controllers
           {
               return Problem("Entity set 'VolleyballContext.Countries'  is null.");
           }
+            if (country.Name.IsNullOrEmpty())
+            {
+                return NoContent(); 
+            }
             _context.Countries.Add(country);
             await _context.SaveChangesAsync();
 
