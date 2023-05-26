@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  bodyabet:
+    image: ${DOCKER_REGISTRY-}bodyabet
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  sqlserverService: 
+    image: mcr.microsoft.com/mssql/server:latest
+    
