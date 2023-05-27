@@ -1,5 +1,4 @@
-﻿using Xunit.Sdk;
-
+﻿
 namespace BodyaBet.Models
 {
     public class Country
